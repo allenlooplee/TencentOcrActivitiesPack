@@ -2,7 +2,7 @@
 
 ## 其他代码库和参考资料
 * [云可扩展OCR活动包](https://github.com/allenlooplee/CloudOcrActivitiesPack)
-* [腾讯OCR文档](https://cloud.tencent.com/product/ocr-catalog/developer)
+* [腾讯OCR API文档](https://cloud.tencent.com/document/api/866/33515)
 * [Tencent Cloud API 3.0 SDK for .NET](https://github.com/TencentCloud/tencentcloud-sdk-dotnet)
 * [JSON.NET](https://github.com/JamesNK/Newtonsoft.Json)
 * [How to Create Activities](https://docs.uipath.com/integrations/docs/how-to-create-activities)
