@@ -46,9 +46,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Activities\" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="Cloud.Ocr.Activities" Version="0.2.0.415144644" />
   </ItemGroup>
 </Project>
