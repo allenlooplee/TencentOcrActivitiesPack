@@ -52,28 +52,22 @@
     <DocumentationFile>bin\$(Configuration)\Tencent.Ocr.Activities.Design.xml</DocumentationFile>
   </PropertyGroup>
 	<ItemGroup>
-		<Reference Include="System"/>
-    <Reference Include="System.Core"/>
-		<Reference Include="System.Xml.Linq"/>
-		<Reference Include="System.Data.DataSetExtensions"/>
-		<Reference Include="Microsoft.CSharp"/>
+		<Reference Include="System" />
+    <Reference Include="System.Core" />
+		<Reference Include="System.Xml.Linq" />
+		<Reference Include="System.Data.DataSetExtensions" />
+		<Reference Include="Microsoft.CSharp" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-		<Reference Include="System.Data"/>
-		<Reference Include="System.Xml"/>
-    <Reference Include="System.Activities"/>
-    <Reference Include="System.Activities.Presentation"/>
-    <Reference Include="System.Xaml"/>
-    <Reference Include="WindowsBase"/>
-    <Reference Include="System.Activities.Core.Presentation"/>
+		<Reference Include="System.Data" />
+		<Reference Include="System.Xml" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Activities.Presentation" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="System.Activities.Core.Presentation" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="..\..\Shared\Themes\Generic.xaml">
-      <Link>Themes\Generic.xaml</Link>
-      <Generator>XamlIntelliSenseFileGenerator</Generator>
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Page>
     <Page Include="Themes\Icons.xaml">
       <Generator>XamlIntelliSenseFileGenerator</Generator>
       <SubType>Designer</SubType>
@@ -81,10 +75,13 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Tencent.Ocr.Activities\Tencent.Ocr.Activities.csproj" PrivateAssets="All"/>
+    <ProjectReference Include="..\Tencent.Ocr.Activities\Tencent.Ocr.Activities.csproj" PrivateAssets="All" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Designers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Cloud.Ocr.Activities" Version="0.2.0.415144644" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
@@ -102,5 +99,4 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <Import Project="..\..\Shared\UiPath.Shared.Activities.Design\UiPath.Shared.Activities.Design.projitems" Label="Shared" />
 </Project>

@@ -9,21 +9,21 @@
     <DocumentationFile>bin\$(Configuration)\Tencent.Ocr.xml</DocumentationFile>
   </PropertyGroup>
 	<ItemGroup>
-		<Reference Include="System"/>
+		<Reference Include="System" />
 		
-		<Reference Include="System.Core"/>
-		<Reference Include="System.Xml.Linq"/>
-		<Reference Include="System.Data.DataSetExtensions"/>
+		<Reference Include="System.Core" />
+		<Reference Include="System.Xml.Linq" />
+		<Reference Include="System.Data.DataSetExtensions" />
 		
 		
-		<Reference Include="Microsoft.CSharp"/>
+		<Reference Include="Microsoft.CSharp" />
  		
-		<Reference Include="System.Data"/>
-		<Reference Include="System.Xml"/>
-    <Reference Include="System.Net.Http"/>
-    <Reference Include="System.Windows"/>
-    <Reference Include="System.Xaml"/>
-    <Reference Include="WindowsBase"/>
+		<Reference Include="System.Data" />
+		<Reference Include="System.Xml" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
@@ -45,5 +45,8 @@
     <Folder Include="Contracts\" />
     <Folder Include="Enums\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Cloud.Ocr.Activities" Version="0.2.0.415144644" />
   </ItemGroup>
 </Project>
