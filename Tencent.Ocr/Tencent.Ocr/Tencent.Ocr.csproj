@@ -48,5 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Cloud.Ocr.Activities" Version="0.2.0.415144644" />
+    <PackageReference Include="TencentCloudSDK" Version="3.0.47" />
   </ItemGroup>
 </Project>
