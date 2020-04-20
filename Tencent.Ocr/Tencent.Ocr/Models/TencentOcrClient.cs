@@ -35,7 +35,8 @@ namespace Tencent.Ocr.Models
 
             var clientProfile = new ClientProfile
             {
-                HttpProfile = httpProfile
+                HttpProfile = httpProfile,
+                SignMethod = "TC3-HMAC-SHA256"
             };
 
             _tencentOcrClient = new OcrClient(credential, region, clientProfile);

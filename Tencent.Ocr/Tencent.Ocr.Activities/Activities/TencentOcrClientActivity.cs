@@ -10,25 +10,25 @@ using UiPath.Shared.Activities.Localization;
 
 namespace Tencent.Ocr.Activities
 {
-    [LocalizedDisplayName(nameof(Resources.TencentOcrClientActivity_DisplayName))]
-    [LocalizedDescription(nameof(Resources.TencentOcrClientActivity_Description))]
+    [LocalizedDisplayName(nameof(Resources.TencentOcrClientActivity_DisplayName), typeof(Resources))]
+    [LocalizedDescription(nameof(Resources.TencentOcrClientActivity_Description), typeof(Resources))]
     public class TencentOcrClientActivity : BaseOcrClientActivity
     {
         #region Properties
 
-        [LocalizedDisplayName(nameof(Resources.TencentOcrClientActivity_SecretId_DisplayName))]
-        [LocalizedDescription(nameof(Resources.TencentOcrClientActivity_SecretId_Description))]
-        [LocalizedCategory(nameof(Resources.Input_Category))]
+        [LocalizedDisplayName(nameof(Resources.TencentOcrClientActivity_SecretId_DisplayName), typeof(Resources))]
+        [LocalizedDescription(nameof(Resources.TencentOcrClientActivity_SecretId_Description), typeof(Resources))]
+        [LocalizedCategory(nameof(Resources.Input_Category), typeof(Resources))]
         public InArgument<string> SecretId { get; set; }
 
-        [LocalizedDisplayName(nameof(Resources.TencentOcrClientActivity_SecretKey_DisplayName))]
-        [LocalizedDescription(nameof(Resources.TencentOcrClientActivity_SecretKey_Description))]
-        [LocalizedCategory(nameof(Resources.Input_Category))]
+        [LocalizedDisplayName(nameof(Resources.TencentOcrClientActivity_SecretKey_DisplayName), typeof(Resources))]
+        [LocalizedDescription(nameof(Resources.TencentOcrClientActivity_SecretKey_Description), typeof(Resources))]
+        [LocalizedCategory(nameof(Resources.Input_Category), typeof(Resources))]
         public InArgument<string> SecretKey { get; set; }
 
-        [LocalizedDisplayName(nameof(Resources.TencentOcrClientActivity_Region_DisplayName))]
-        [LocalizedDescription(nameof(Resources.TencentOcrClientActivity_Region_Description))]
-        [LocalizedCategory(nameof(Resources.Input_Category))]
+        [LocalizedDisplayName(nameof(Resources.TencentOcrClientActivity_Region_DisplayName), typeof(Resources))]
+        [LocalizedDescription(nameof(Resources.TencentOcrClientActivity_Region_Description), typeof(Resources))]
+        [LocalizedCategory(nameof(Resources.Input_Category), typeof(Resources))]
         public InArgument<string> Region { get; set; }
 
         #endregion

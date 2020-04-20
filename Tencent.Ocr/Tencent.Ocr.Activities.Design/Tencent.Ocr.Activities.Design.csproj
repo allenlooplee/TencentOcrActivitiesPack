@@ -8,13 +8,13 @@
   <!-- Package Metadata -->
   <PropertyGroup>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <Description>This package was generated using the UiPath VS Extension.</Description>
-    <Authors>Company</Authors>
-    <Company>Company</Company>
-    <Copyright>@ 2020 Company</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Description>Tencent OCR Activities Pack for UiPath</Description>
+    <Authors>Allen Lee</Authors>
+    <Company>Allen Lee</Company>
+    <Copyright>@ 2020 Allen Lee</Copyright>
     <PackageTags>UiPath Activit𝗒</PackageTags>
-    <PackageProjectUrl>https://docs.uipath.com/integrations/docs/how-to-create-activities</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/allenlooplee/TencentOcrActivitiesPack</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/NuGet/Samples/master/PackageIconNuspecExample/icon.png</PackageIconUrl>
     <PackageIcon>packageIcon.png</PackageIcon>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Designers\TencentOcrClientActivityDesigner.xaml" />
+    <None Remove="Themes\Generic.xaml" />
   </ItemGroup>
   <!-- Package Icon -->
   <ItemGroup>
@@ -72,6 +73,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Designers\TencentOcrClientActivityDesigner.xaml">
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
       <Generator>XamlIntelliSenseFileGenerator</Generator>
     </Page>
     <Page Include="Themes\Icons.xaml">
