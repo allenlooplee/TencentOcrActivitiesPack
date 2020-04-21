@@ -11,6 +11,27 @@
 4. **加载密钥**: 使用[snippets/LoadTencentOcrConfig.xaml](https://github.com/allenlooplee/CloudOcrActivitiesPack/blob/master/snippets/LoadTencentOcrConfig.xaml)代码片段从上述配置文件加载密钥和地域参数。
 5. **使用活动**：把你想使用的OCR活动从Activities面板拖到OCR Scope活动中。
 
+## OCR活动清单
+
+本活动包支持以下[云可扩展OCR活动包](https://github.com/allenlooplee/CloudOcrActivitiesPack)的OCR活动：
+
+#|名称|类型|活动
+---|---|---|---
+1|[增值税发票识别](https://cloud.tencent.com/document/product/866/36210)|票据|[VatInvoiceActivity](https://github.com/allenlooplee/CloudOcrActivitiesPack/blob/master/Cloud.Ocr/Cloud.Ocr.Activities/Activities/VatInvoiceActivity.cs)
+2|[定额发票识别](https://cloud.tencent.com/document/product/866/37073)|票据|[QuotaInvoiceActivity](https://github.com/allenlooplee/CloudOcrActivitiesPack/blob/master/Cloud.Ocr/Cloud.Ocr.Activities/Activities/QuotaInvoiceActivity.cs)
+3|[出租车票识别](https://cloud.tencent.com/document/product/866/37072)|票据|[TaxiReceiptActivity](https://github.com/allenlooplee/CloudOcrActivitiesPack/blob/master/Cloud.Ocr/Cloud.Ocr.Activities/Activities/TaxiReceiptActivity.cs)
+4|[火车票识别](https://cloud.tencent.com/document/product/866/37071)|票据|[TrainTicketActivity](https://github.com/allenlooplee/CloudOcrActivitiesPack/blob/master/Cloud.Ocr/Cloud.Ocr.Activities/Activities/TrainTicketActivity.cs)
+5|[身份证识别](https://cloud.tencent.com/document/product/866/33524)|卡证|[IdCardActivity](https://github.com/allenlooplee/CloudOcrActivitiesPack/blob/master/Cloud.Ocr/Cloud.Ocr.Activities/Activities/IdCardActivity.cs)
+6|[户口本识别](https://cloud.tencent.com/document/product/866/40036)|卡证|[HouseholdRegisterActivity](https://github.com/allenlooplee/CloudOcrActivitiesPack/blob/master/Cloud.Ocr/Cloud.Ocr.Activities/Activities/HouseholdRegisterActivity.cs)
+7|[护照识别](https://cloud.tencent.com/document/product/866/37840)|卡证|[PassportActivity](https://github.com/allenlooplee/CloudOcrActivitiesPack/blob/master/Cloud.Ocr/Cloud.Ocr.Activities/Activities/PassportActivity.cs)
+8|[港澳通行证识别](https://cloud.tencent.com/document/product/866/37074)|卡证|[HkMacauExitentrypermitActivity](https://github.com/allenlooplee/CloudOcrActivitiesPack/blob/master/Cloud.Ocr/Cloud.Ocr.Activities/Activities/HkMacauExitentrypermitActivity.cs)
+9|[台湾通行证识别](https://cloud.tencent.com/document/product/866/37074)|卡证|[TaiwanExitentrypermitActivity](https://github.com/allenlooplee/CloudOcrActivitiesPack/blob/master/Cloud.Ocr/Cloud.Ocr.Activities/Activities/TaiwanExitentrypermitActivity.cs)
+10|[营业执照识别](https://cloud.tencent.com/document/product/866/36215)|卡证|[BusinessLicenseActivity](https://github.com/allenlooplee/CloudOcrActivitiesPack/blob/master/Cloud.Ocr/Cloud.Ocr.Activities/Activities/BusinessLicenseActivity.cs)
+11|[银行卡识别](https://cloud.tencent.com/document/product/866/36216)|卡证|[BankCardActivity](https://github.com/allenlooplee/CloudOcrActivitiesPack/blob/master/Cloud.Ocr/Cloud.Ocr.Activities/Activities/BankCardActivity.cs)
+12|[行驶证识别](https://cloud.tencent.com/document/product/866/36209)|汽车场景|[VehicleLicenseActivity](https://github.com/allenlooplee/CloudOcrActivitiesPack/blob/master/Cloud.Ocr/Cloud.Ocr.Activities/Activities/VehicleLicenseActivity.cs)
+13|[驾驶证识别](https://cloud.tencent.com/document/product/866/36213)|汽车场景|[DriverLicenseActivity](https://github.com/allenlooplee/CloudOcrActivitiesPack/blob/master/Cloud.Ocr/Cloud.Ocr.Activities/Activities/DriverLicenseActivity.cs)
+14|[机动车销售发票识别](https://cloud.tencent.com/document/product/866/37076)|票据|[VehicleInvoiceActivity](https://github.com/allenlooplee/CloudOcrActivitiesPack/blob/master/Cloud.Ocr/Cloud.Ocr.Activities/Activities/VehicleInvoiceActivity.cs)
+
 ## 其他代码库和参考资料
 * [云可扩展OCR活动包](https://github.com/allenlooplee/CloudOcrActivitiesPack)
 * [腾讯OCR API文档](https://cloud.tencent.com/document/api/866/33515)
