@@ -1,5 +1,7 @@
 # 腾讯OCR活动包
 
+![海报](https://github.com/allenlooplee/TencentOcrActivitiesPack/blob/master/docs/images/poster.png)
+
 [腾讯云](https://cloud.tencent.com/product/ocr-catalog)提供多种OCR，如增值税发票、营业执照、驾驶证等，可以用于多种RPA流程。本代码库基于[云可扩展OCR活动包](https://github.com/allenlooplee/CloudOcrActivitiesPack)开发，打通UiPath和腾讯OCR，让开发者能在UiPath Studio中通过简单的拖放和设置把腾讯OCR用到相关流程中，从而加速开发过程。
 
 ## 快速开始
