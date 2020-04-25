@@ -50,23 +50,23 @@ namespace Tencent.Ocr.Models
             var imageData = File.ReadAllBytes(imagePath);
             var imageBase64 = Convert.ToBase64String(imageData);
 
-            // Get type/member names for reflection
+            // Translate the recognizer name used by OCR activity to the action name used by Tencent OCR
             var actionName = _actionDictionary[recognizerName];
-            var requestTypeName = $"TencentCloud.Ocr.V20181119.Models.{actionName}Request";
-            var imagePropertyName = "ImageBase64";
-            var methodName = $"{actionName}Sync";
 
-            // Get request object via reflection
+            // Create request object for specified recognizer via reflection
+            var requestTypeName = $"TencentCloud.Ocr.V20181119.Models.{actionName}Request";
             var ocrClientType = typeof(OcrClient);
             var ocrClientAssembly = ocrClientType.Assembly;
             var requestType = ocrClientAssembly.GetType(requestTypeName);
             var request = Activator.CreateInstance(requestType);
 
             // Set image property via reflection
+            var imagePropertyName = "ImageBase64";
             var imagePropertyInfo = requestType.GetProperty(imagePropertyName);
             imagePropertyInfo.SetValue(request, imageBase64);
 
-            // Call OCR method with reflection
+            // Call OCR method via reflection
+            var methodName = $"{actionName}Sync";
             var methodInfo = ocrClientType.GetMethod(methodName);
             var response = await Task.Run(() => methodInfo.Invoke(_tencentOcrClient, new[] { request }));
 
