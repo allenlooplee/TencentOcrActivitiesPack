@@ -11,6 +11,7 @@ using TencentCloud.Ocr.V20181119;
 using TencentCloud.Ocr.V20181119.Models;
 using System.IO;
 using Cloud.Ocr.Models;
+using Cloud.Ocr.Activities;
 
 namespace Tencent.Ocr.Models
 {
@@ -64,6 +65,16 @@ namespace Tencent.Ocr.Models
             var imagePropertyName = "ImageBase64";
             var imagePropertyInfo = requestType.GetProperty(imagePropertyName);
             imagePropertyInfo.SetValue(request, imageBase64);
+
+            // Set CardSide property via reflection
+            var optionKey = nameof(IdCardActivity.CardSide);
+            if (options != null && options.ContainsKey(optionKey))
+            {
+                var cardSidePropertyName = "CardSide";
+                var cardSidePropertyInfo = requestType.GetProperty(cardSidePropertyName);
+                var cardSideValue = (CardSide)options[optionKey];
+                cardSidePropertyInfo.SetValue(request, options[optionKey].ToString().ToUpper()); 
+            }
 
             // Call OCR method via reflection
             var methodName = $"{actionName}Sync";
