@@ -11,6 +11,7 @@ using TencentCloud.Ocr.V20181119;
 using TencentCloud.Ocr.V20181119.Models;
 using System.IO;
 using Cloud.Ocr.Models;
+using Cloud.Ocr.Activities;
 
 namespace Tencent.Ocr.Models
 {
@@ -50,24 +51,36 @@ namespace Tencent.Ocr.Models
             var imageData = File.ReadAllBytes(imagePath);
             var imageBase64 = Convert.ToBase64String(imageData);
 
-            // Get type/member names for reflection
+            // Translate the recognizer name used by OCR activity to the action name used by Tencent OCR
             var actionName = _actionDictionary[recognizerName];
-            var requestTypeName = $"TencentCloud.Ocr.V20181119.Models.{actionName}Request";
-            var imagePropertyName = "ImageBase64";
-            var methodName = $"{actionName}Sync";
 
-            // Get type/member metadata with reflection
+            // Create request object for specified recognizer via reflection
+            var requestTypeName = $"TencentCloud.Ocr.V20181119.Models.{actionName}Request";
             var ocrClientType = typeof(OcrClient);
             var ocrClientAssembly = ocrClientType.Assembly;
             var requestType = ocrClientAssembly.GetType(requestTypeName);
-            var propertyInfo = requestType.GetProperty(imagePropertyName);
-            var methodInfo = ocrClientType.GetMethod(methodName);
-
-            // Create request object with reflection
             var request = Activator.CreateInstance(requestType);
-            propertyInfo.SetValue(request, imageBase64);
 
-            // Call OCR method with reflection
+            // Set image property via reflection
+            var imagePropertyName = "ImageBase64";
+            var imagePropertyInfo = requestType.GetProperty(imagePropertyName);
+            imagePropertyInfo.SetValue(request, imageBase64);
+
+            // Set CardSide property via reflection if the value is provided in options
+            var optionKey = nameof(IdCardActivity.CardSide);
+            if (options != null && options.ContainsKey(optionKey))
+            {
+                var cardSidePropertyName = "CardSide";
+                var cardSidePropertyInfo = requestType.GetProperty(cardSidePropertyName);
+                var cardSideValue = (CardSide)options[optionKey];
+                // Set the value only if the request type contains such property
+                // by using null-conditional operator ?.
+                cardSidePropertyInfo?.SetValue(request, options[optionKey].ToString().ToUpper()); 
+            }
+
+            // Call OCR method via reflection
+            var methodName = $"{actionName}Sync";
+            var methodInfo = ocrClientType.GetMethod(methodName);
             var response = await Task.Run(() => methodInfo.Invoke(_tencentOcrClient, new[] { request }));
 
             // Return response as JObject
