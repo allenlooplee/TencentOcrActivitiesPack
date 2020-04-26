@@ -66,14 +66,16 @@ namespace Tencent.Ocr.Models
             var imagePropertyInfo = requestType.GetProperty(imagePropertyName);
             imagePropertyInfo.SetValue(request, imageBase64);
 
-            // Set CardSide property via reflection
+            // Set CardSide property via reflection if the value is provided in options
             var optionKey = nameof(IdCardActivity.CardSide);
             if (options != null && options.ContainsKey(optionKey))
             {
                 var cardSidePropertyName = "CardSide";
                 var cardSidePropertyInfo = requestType.GetProperty(cardSidePropertyName);
                 var cardSideValue = (CardSide)options[optionKey];
-                cardSidePropertyInfo.SetValue(request, options[optionKey].ToString().ToUpper()); 
+                // Set the value only if the request type contains such property
+                // by using null-conditional operator ?.
+                cardSidePropertyInfo?.SetValue(request, options[optionKey].ToString().ToUpper()); 
             }
 
             // Call OCR method via reflection
