@@ -8,7 +8,7 @@
 
 在UiPath Studio中使用百度OCR活动包可以遵循以下步骤：
 1. **创建项目**：使用[templates/CloudOcrBasicProcess](https://github.com/allenlooplee/CloudOcrActivitiesPack/tree/master/templates/CloudOcrBasicProcess)模版创建OCR流程，你可以查阅[它的文档](https://github.com/allenlooplee/CloudOcrActivitiesPack/blob/master/docs/cloud-ocr-basic-process.md)。
-2. **安装活动包**：在GitHub Releases中下载[v0.1.0 pre-release](https://github.com/allenlooplee/TencentOcrActivitiesPack/releases/tag/v0.1.0)，并在UiPath Studio的Manage Packages中安装。
+2. **安装活动包**：打开UiPath Studio的Manage Packages，在[nuget.org](https://api.nuget.org/v3/index.json)中搜索并安装Tencent.Ocr.Activities。
 3. **配置密钥**：在腾讯云上开通OCR服务，并把SecretId和SecretKey保存到[config/tencent_ocr_config.xlsx](https://github.com/allenlooplee/CloudOcrActivitiesPack/blob/master/templates/CloudOcrBasicProcess/config/tencent_ocr_config.xlsx)。
 4. **加载密钥**: 使用[snippets/LoadTencentOcrConfig.xaml](https://github.com/allenlooplee/CloudOcrActivitiesPack/blob/master/snippets/LoadTencentOcrConfig.xaml)代码片段从上述配置文件加载密钥和地域参数。
 5. **使用活动**：把你想使用的OCR活动从Activities面板拖到OCR Scope活动中。
