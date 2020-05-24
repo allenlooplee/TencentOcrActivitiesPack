@@ -9,6 +9,9 @@
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <DocumentationFile>bin\$(Configuration)\Tencent.Ocr.Activities.xml</DocumentationFile>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Cloud.Ocr.Activities" Version="0.2.0" />
+  </ItemGroup>
 	<ItemGroup>
 		<Reference Include="System" />
 		
@@ -44,8 +47,5 @@
     <EmbeddedResource Update="Properties\Resources.*.resx">
       <DependentUpon>Resources.resx</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Cloud.Ocr.Activities" Version="0.2.0.415144644" />
   </ItemGroup>
 </Project>

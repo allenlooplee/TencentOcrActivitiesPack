@@ -55,6 +55,9 @@
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <DocumentationFile>bin\$(Configuration)\Tencent.Ocr.Activities.Design.xml</DocumentationFile>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Cloud.Ocr.Activities" Version="0.2.0" />
+  </ItemGroup>
 	<ItemGroup>
 		<Reference Include="System" />
     <Reference Include="System.Core" />
@@ -86,9 +89,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Tencent.Ocr.Activities\Tencent.Ocr.Activities.csproj" PrivateAssets="All" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Cloud.Ocr.Activities" Version="0.2.0.415144644" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
